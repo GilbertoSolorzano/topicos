@@ -21,18 +21,21 @@ const palabras = ['humanidad', 'humano', 'persona', 'gente', 'hombre', 'mujer', 
             ]
 const numeroMinimo=50, numeroMaximo=100
 
-for(let i=0; i<5;i++){
-    const parrafo = document.createElement('p')
-    const cantidadPalabras = Math.floor(Math.random()* (numeroMaximo - numeroMinimo+1)) + numeroMinimo
-    let texto = ''
-    for(let m=0; m<cantidadPalabras; m++){
-        const palabraUsada = palabras[Math.floor(Math.random() * palabras.length)]
-        texto += palabraUsada + ' '
+function crearParrafo(){
+    for(let i=0; i<5;i++){
+        const parrafo = document.createElement('p')
+        const cantidadPalabras = Math.floor(Math.random()* (numeroMaximo - numeroMinimo+1)) + numeroMinimo
+        let texto = ''
+        for(let m=0; m<cantidadPalabras; m++){
+            const palabraUsada = palabras[Math.floor(Math.random() * palabras.length)]
+            texto += palabraUsada + ' '
+        }
+        texto = texto + '--Cantidad de caracteres: '+ texto.length 
+        //+ 'Cantidad De palabras: ' + cantidadPalabras
+        parrafo.textContent = texto.trim()
+        body.appendChild(parrafo)
+        body.appendChild(document.createElement("br"));
+        body.appendChild(document.createElement("br"));
     }
-    texto = texto + '--Cantidad de caracteres: '+ texto.length 
-    //+ 'Cantidad De palabras: ' + cantidadPalabras
-    parrafo.textContent = texto.trim()
-    body.appendChild(parrafo)
-    body.appendChild(document.createElement("br"));
-    body.appendChild(document.createElement("br"));
 }
+crearParrafo();
