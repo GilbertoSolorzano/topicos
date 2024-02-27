@@ -25,7 +25,9 @@ for(let i=0; i<10; i++){
 }
 ```
 > ### Finalmente el color la variable indice se coloca dentro del arreglo colores, para asi acceder a dicho color y asignarlo al contenedor; una vez asignado el color, se utiliza el metodo
-```javascript .splice```
+```javascript 
+.splice
+```
 >  para eliminar el color utilizado del arreglo de colores y de esta manera evitar que se respitan los colores para asi agregar el contender al cuerpo de la pagina
 
 ![script02](../img/script02.png "resultado script02")
